@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+.timer{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+.buttons{
+    width: 320px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    padding: 10px 10px;
+    background-color: rgb(221, 85, 85);
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(223, 57, 57);
+}
+.btn:disabled{
+    background-color: rgb(240, 111, 111);
+    cursor: default;
+}
+.btn:active{
+    outline: none;
+    box-shadow: 0px 0px 2px 2px rgba(223, 57, 57, 0.459);
+}
+.game-fields{
+    display: flex;
+    justify-content: space-around;
+}
+.input, .output{
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.box{
+    width: 75px;
+    height: 75px;
+}
+.piece{
+    width: 75px;
+    height: 75px;
+    background-image: url('image/Arsenal_FC.png');
+    background-repeat: no-repeat;
+    background-size: 400% 400%;
+    
+}
+.piece[data-number="1"]{
+    background-position: 0% 0%;
+}
+.piece[data-number="2"]{
+    background-position: 33.3% 0%;
+}
+.piece[data-number="3"]{
+    background-position: 66.6% 0%;
+}
+.piece[data-number="4"]{
+    background-position: 100% 0%;
+}
+.piece[data-number="5"]{
+    background-position: 0% 33.3%;
+}
+.piece[data-number="6"]{
+    background-position: 33.3% 33.3%;
+}
+.piece[data-number="7"]{
+    background-position: 66.6% 33.3%;
+}
+.piece[data-number="8"]{
+    background-position: 100% 33.3%;
+}
+.piece[data-number="9"]{
+    background-position: 0% 66.6%;
+}
+.piece[data-number="10"]{
+    background-position: 33.3% 66.6%;
+}
+.piece[data-number="11"]{
+    background-position: 66.6% 66.6%;
+}
+.piece[data-number="12"]{
+    background-position: 100% 66.6%;
+}
+.piece[data-number="13"]{
+    background-position: 0% 100%;
+}
+.piece[data-number="14"]{
+    background-position: 33.3% 100%;
+}
+.piece[data-number="15"]{
+    background-position: 66.6% 100%;
+}
+.piece[data-number="16"]{
+    background-position: 100% 100%;
+}
+.modal{
+    width: 100vw;
+    height: 100vh;
+    z-index: -20;
+    position: absolute;
+    overflow: hidden;
+}
+.modal-container{
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: -300px;
+    overflow: hidden;
+}
+.modal-check, .modal-message{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    
+}
+.modal-check{
+    z-index: 10;
+}
+.modal-check p, .modal p{
+    font-size: 30px;
+    height: 70px;
+    line-height: 70px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+.modal-check span{
+    font-size: 30px;
+    display: inline;
+}
+.check-btn{
+    background-color: rgb(33, 163, 33);
+}
+.check-btn:hover{
+    cursor: pointer;
+    background-color: rgb(31, 141, 31);
+}
+.check-btn:active{
+    outline: none;
+    box-shadow: 0px 0px 2px 2px rgba(33, 163, 33, 0.479);
+}
